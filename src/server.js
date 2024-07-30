@@ -2,9 +2,12 @@
 const express = require('express'); 
 const path = require('path'); // khai báo path
 require('dotenv').config; //cấu hình dotenv cho port cấu hình
+
 const app = express();
 const port = process.env.PORT || 4200; //cau hình port
 const hostname = process.env.HOST_NAME; //cấu hình đường dẫn
+// config static files css,image,js
+app.use(express.static(path.join(__dirname,'./public')));
 
 app.set('views', path.join(__dirname, './views')); //cấu hình join theo __dirname
 app.set('view engine', 'ejs'); //cấu hinhg ejs
