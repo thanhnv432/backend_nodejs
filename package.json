@@ -1,0 +1,19 @@
+{
+  "name": "hoc_backend_nodejs",
+  "version": "1.0.0",
+  "description": "hoc full",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "thanhnv",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
