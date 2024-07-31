@@ -13,7 +13,8 @@
         <a href="#about">About</a>
       </div>
       <div class="form" style="margin-top: 100px;">
-        <form action="create-user" method="post">
+        <!-- <form action="create-user" method="post">
+            <%= JSON.stringify(listUsers) %>
             <fieldset style="padding: 10px;">
                 <legend>Form add new user</legend>
                 <div class="input-group">
@@ -33,8 +34,29 @@
                     <button class="btn-save">Save</button>
                 </div>
             </fieldset>
-        </form>
-
+        </form> -->
+        <%= JSON.stringify(listUsers) %>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+            <% for (let i=0; i < listUsers.length; i++) { %>
+                <tr>
+                   <td><%= listUsers[i].id %></td>
+                   <td><%= listUsers[i].email %></td>
+                   <td><%= listUsers[i].name %></td>
+                   <td><%= listUsers[i].city %></td>
+                   <td>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                   </td>
+                </tr>
+            <% } %>
+        </table>
        
       </div>
 </body>
